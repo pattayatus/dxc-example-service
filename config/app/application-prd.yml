@@ -1,0 +1,230 @@
+#--------------------------
+# Base Config
+#--------------------------
+server.port: 0
+spring.security.oauth2.resourceserver.jwt.issuer-uri: https://sso.dxc.go.th/auth/realms/DXC
+app.security.mock: true
+spring.h2.console.enabled: true
+springfox.documentation.swagger.use-model-v3: false
+log.level:
+    root: INFO
+    th.go.dxc: INFO
+    org.hibernate.SQL: WARN
+    reactor.netty.http.client: WARN
+
+#==================
+# DXC Primary Data Source
+#==================
+infra.datasource.primary:
+  datasource:
+    url: jdbc:h2:mem:primary;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: false # for debug
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      # DDL Auto Properties (database)
+      javax.persistence.schema-generation.database.action: none
+      # Naming Convention Properties      
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+
+#--------------------------
+# Extra Config
+#---------------------------
+infra.datasource.primary.datasource.hikari:
+  connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+  minimum-idle: 10 #minimum number of idle connections maintained by HikariCP in a connection pool
+  maximum-pool-size: 10 #maximum pool size
+  idle-timeout: 10000 #maximum idle time for connection
+  max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+  auto-commit: true #default auto-commit behavior.
+
+infra.datasource.primary.jpa.open-in-view: true  # have the same EntityManager until the web request is finished
+
+infra.datasource.primary.jpa.properties:
+  javax.persistence.schema-generation.scripts.action: drop-and-create
+  javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql
+  javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql      
+  hibernate.jdbc.batch_size: 5
+  hibernate.batch_versioned_data: true
+  hibernate.order_inserts: true
+  hibernate.order_updates: true
+  hibernate.show_sql: false
+  hibernate.format_sql: true
+  hibernate.use_sql_comments: true
+  hibernate.generate_statistics: false
+        
+#==================
+# DXC Data DB Data Source
+#==================
+infra.datasource.data-db:
+  datasource:
+    url: jdbc:h2:mem:data_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: false # for debug
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      # DDL Auto Properties (database)
+      javax.persistence.schema-generation.database.action: none
+      # Naming Convention Properties      
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+
+#-----------------------
+# Extra Config
+#----------------------
+infra.datasource.data-db.datasource.hikari:
+  connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+  minimum-idle: 10 #minimum number of idle connections maintained by HikariCP in a connection pool
+  maximum-pool-size: 10 #maximum pool size
+  idle-timeout: 10000 #maximum idle time for connection
+  max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+  auto-commit: true #default auto-commit behavior.
+
+infra.datasource.data-db.jpa.open-in-view: true  # have the same EntityManager until the web request is finished
+
+infra.datasource.data-db.jpa.properties:
+  javax.persistence.schema-generation.scripts.action: drop-and-create
+  javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql
+  javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql      
+  hibernate.jdbc.batch_size: 5
+  hibernate.batch_versioned_data: true
+  hibernate.order_inserts: true
+  hibernate.order_updates: true
+  hibernate.show_sql: false
+  hibernate.format_sql: true
+  hibernate.use_sql_comments: true
+  hibernate.generate_statistics: false
+
+#==================
+# Reference Datasource config
+#==================
+infra.datasource.reference-db:
+  datasource:
+    url: jdbc:h2:mem:reference_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  # JPA Setting
+  jpa:
+    show-sql: false # for debug
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      # DDL Auto Properties (database)
+      javax.persistence.schema-generation.database.action: none
+      # Naming Convention Properties      
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+#--------------------------
+# Extra Config
+#-------------------------
+infra.datasource.reference-db.datasource.hikari:
+  connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+  minimum-idle: 10 #minimum number of idle connections maintained by HikariCP in a connection pool
+  maximum-pool-size: 10 #maximum pool size
+  idle-timeout: 10000 #maximum idle time for connection
+  max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+  auto-commit: true #default auto-commit behavior.
+
+infra.datasource.reference-db.jpa.open-in-view: true  # have the same EntityManager until the web request is finished
+
+infra.datasource.reference-db.jpa.properties:
+  javax.persistence.schema-generation.scripts.action: drop-and-create
+  javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql
+  javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql      
+  hibernate.jdbc.batch_size: 5
+  hibernate.batch_versioned_data: true
+  hibernate.order_inserts: true
+  hibernate.order_updates: true
+  hibernate.show_sql: false
+  hibernate.format_sql: true
+  hibernate.use_sql_comments: true
+  hibernate.generate_statistics: false
+
+#==================
+# DXC SAM DB Datasource config
+#==================
+infra.datasource.dxc-sam:
+  datasource:
+    url: jdbc:h2:mem:dxc_sam;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  # JPA Setting
+  jpa:
+    show-sql: false # for debug
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      # DDL Auto Properties (database)
+      javax.persistence.schema-generation.database.action: none
+      # Naming Convention Properties      
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+
+#--------------------------
+# Extra Config
+#-------------------------
+infra.datasource.dxc-sam.datasource.hikari:
+  connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+  minimum-idle: 10 #minimum number of idle connections maintained by HikariCP in a connection pool
+  maximum-pool-size: 10 #maximum pool size
+  idle-timeout: 10000 #maximum idle time for connection
+  max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+  auto-commit: true #default auto-commit behavior.
+
+infra.datasource.dxc-sam.jpa.open-in-view: true  # have the same EntityManager until the web request is finished
+
+infra.datasource.dxc-sam.jpa.properties:
+  javax.persistence.schema-generation.scripts.action: drop-and-create
+  javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql
+  javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql      
+  hibernate.jdbc.batch_size: 5
+  hibernate.batch_versioned_data: true
+  hibernate.order_inserts: true
+  hibernate.order_updates: true
+  hibernate.show_sql: false
+  hibernate.format_sql: true
+  hibernate.use_sql_comments: true
+  hibernate.generate_statistics: false
+
+#--------------------------
+# Actuator Config
+#--------------------------
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # SBA Config  
+  endpoint:
+    health:
+      show-details: ALWAYS  # SBA Config
+
+#--------------------------
+#  Log Config
+#--------------------------
+logging.file.name: logs/${spring.application.name}.log
+logging.logback:
+    rollingpolicy:
+      file-name-pattern: logs/${spring.application.name}-%d{yyyy-MM-dd}.%i.log
+      clean-history-on-start: true # If log archive cleanup should occur when the application starts.
+      max-file-size: 10MB # The maximum size of log file before it’s archived.
+      total-size-cap: 100MB # The maximum amount of size log archives can take before being deleted.
+      max-history: 365 # The number of days to keep log archives (defaults to 7)
+
+#--------------------------
+#  Server Config
+#--------------------------
+server.error:
+    include-stacktrace: never #on_trace_param,always on dev
+    include-message: always
+    include-binding-errors: always
+    include-exception: false
+
+#--------------------------
+#  Spring Batch Config
+#--------------------------
+spring.batch.job.enabled: false
+spring.batch.initialize-schema: ALWAYS
+

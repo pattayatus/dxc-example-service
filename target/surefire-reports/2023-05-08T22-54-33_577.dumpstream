@@ -1,0 +1,15 @@
+# Created at 2023-05-08T22:54:34.608
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2023-05-08T22:54:34.608
+WARNING: Illegal reflective access by ma.glasnost.orika.converter.builtin.CloneableConverter (file:/C:/Users/patta/.m2/repository/ma/glasnost/orika/orika-core/1.5.4/orika-core-1.5.4.jar) to method java.lang.Object.clone()
+
+# Created at 2023-05-08T22:54:34.608
+WARNING: Please consider reporting this to the maintainers of ma.glasnost.orika.converter.builtin.CloneableConverter
+
+# Created at 2023-05-08T22:54:34.608
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2023-05-08T22:54:34.609
+WARNING: All illegal access operations will be denied in a future release
+

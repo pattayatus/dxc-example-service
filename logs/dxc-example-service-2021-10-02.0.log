@@ -1,0 +1,196 @@
+2021-10-02 12:22:53.017  INFO [dxc-example-service,,] 1788 --- [main] th.go.dxc.DxcExampleServiceApplication   : Starting DxcExampleServiceApplication using Java 16.0.2 on DESKTOP-H4PTTKF with PID 1788 (C:\Users\patta\git\dxc-example-service\target\classes started by patta in C:\Users\patta\git\dxc-example-service)
+2021-10-02 12:22:53.022  INFO [dxc-example-service,,] 1788 --- [main] th.go.dxc.DxcExampleServiceApplication   : The following profiles are active: dev
+2021-10-02 12:22:54.412  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-02 12:22:54.602  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 1 JPA repository interfaces.
+2021-10-02 12:22:54.603  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-02 12:22:54.615  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2021-10-02 12:22:54.616  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-02 12:22:54.626  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interfaces.
+2021-10-02 12:22:54.627  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-02 12:22:54.635  INFO [dxc-example-service,,] 1788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
+2021-10-02 12:22:56.006  INFO [dxc-example-service,,] 1788 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=11c7365a-8283-32b0-8157-deff234713a9
+2021-10-02 12:22:56.584  INFO [dxc-example-service,,] 1788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-02 12:22:56.592  INFO [dxc-example-service,,] 1788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-02 12:22:56.598  INFO [dxc-example-service,,] 1788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-02 12:22:57.176  INFO [dxc-example-service,,] 1788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-02 12:22:57.187  INFO [dxc-example-service,,] 1788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-02 12:22:57.188  INFO [dxc-example-service,,] 1788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-10-02 12:22:57.427  INFO [dxc-example-service,,] 1788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-02 12:22:57.427  INFO [dxc-example-service,,] 1788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4336 ms
+2021-10-02 12:22:57.745  WARN [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2021-10-02 12:22:57.747  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-02 12:22:58.182  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-02 12:22:58.190  INFO [dxc-example-service,,] 1788 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:primary'
+2021-10-02 12:23:00.406  INFO [dxc-example-service,,] 1788 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-10-02 12:23:01.290  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DataDbDatasourceConfig     : Initi EntityManagerFactory
+2021-10-02 12:23:01.290  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DataDbDatasourceConfig     : HikariDataSource HikariDataSource (null)
+2021-10-02 12:23:01.291  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DataDbDatasourceConfig     : JPA DatabasePlatform: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:01.291  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DataDbDatasourceConfig     : JPA Properties: {hibernate.format_sql=true, hibernate.use_sql_comments=true, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, hibernate.batch_versioned_data=true, javax.persistence.schema-generation.database.action=drop-and-create, javax.persistence.schema-generation.scripts.drop-target=sqls/drop-schema.sql, hibernate.order_inserts=true, javax.persistence.schema-generation.scripts.create-target=sqls/create-schema.sql, javax.persistence.schema-generation.scripts.action=drop-and-create, hibernate.show_sql=false, hibernate.generate_statistics=false, hibernate.order_updates=true, hibernate.jdbc.batch_size=5}
+2021-10-02 12:23:01.325  INFO [dxc-example-service,,] 1788 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: dataDbPersistenceUnit]
+2021-10-02 12:23:01.393  INFO [dxc-example-service,,] 1788 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-02 12:23:01.550  INFO [dxc-example-service,,] 1788 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-02 12:23:01.810  WARN [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2021-10-02 12:23:01.810  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-10-02 12:23:01.812  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-10-02 12:23:01.823  INFO [dxc-example-service,,] 1788 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:02.537  INFO [dxc-example-service,,] 1788 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-02 12:23:02.548  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'dataDbPersistenceUnit'
+2021-10-02 12:23:02.576  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DxcSamDatasourceConfig     : Initi EntityManagerFactory
+2021-10-02 12:23:02.576  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DxcSamDatasourceConfig     : HikariDataSource HikariDataSource (null)
+2021-10-02 12:23:02.576  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DxcSamDatasourceConfig     : JPA DatabasePlatform: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:02.576  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.d.c.DxcSamDatasourceConfig     : JPA Properties: {hibernate.format_sql=true, hibernate.use_sql_comments=true, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, hibernate.batch_versioned_data=true, javax.persistence.schema-generation.database.action=none, javax.persistence.schema-generation.scripts.drop-target=sqls/drop-schema.sql, hibernate.order_inserts=true, javax.persistence.schema-generation.scripts.create-target=sqls/create-schema.sql, javax.persistence.schema-generation.scripts.action=drop-and-create, hibernate.show_sql=false, hibernate.generate_statistics=false, hibernate.order_updates=true, hibernate.jdbc.batch_size=5}
+2021-10-02 12:23:02.580  INFO [dxc-example-service,,] 1788 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: dxcSamPersistenceUnit]
+2021-10-02 12:23:02.641  WARN [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-3 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2021-10-02 12:23:02.641  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-10-02 12:23:02.643  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-10-02 12:23:02.644  INFO [dxc-example-service,,] 1788 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:02.796  INFO [dxc-example-service,,] 1788 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-02 12:23:02.796  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'dxcSamPersistenceUnit'
+2021-10-02 12:23:02.802  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.p.c.PrimaryDatasourceConfig    : Initi EntityManagerFactory
+2021-10-02 12:23:02.802  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.p.c.PrimaryDatasourceConfig    : HikariDataSource HikariDataSource (HikariPool-1)
+2021-10-02 12:23:02.802  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.i.d.p.c.PrimaryDatasourceConfig    : JPA Properties: {hibernate.format_sql=true, hibernate.use_sql_comments=true, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, hibernate.batch_versioned_data=true, javax.persistence.schema-generation.database.action=drop-and-create, javax.persistence.schema-generation.scripts.drop-target=sqls/drop-schema.sql, hibernate.order_inserts=true, javax.persistence.schema-generation.scripts.create-target=sqls/create-schema.sql, javax.persistence.schema-generation.scripts.action=drop-and-create, hibernate.show_sql=false, hibernate.generate_statistics=false, hibernate.order_updates=true, hibernate.jdbc.batch_size=5}
+2021-10-02 12:23:02.805  INFO [dxc-example-service,,] 1788 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2021-10-02 12:23:02.869  INFO [dxc-example-service,,] 1788 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:02.927  INFO [dxc-example-service,,] 1788 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-02 12:23:02.927  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2021-10-02 12:23:02.937  INFO [dxc-example-service,,] 1788 --- [main] .g.d.i.d.r.c.ReferenceDbDatasourceConfig : Initi EntityManagerFactory
+2021-10-02 12:23:02.937  INFO [dxc-example-service,,] 1788 --- [main] .g.d.i.d.r.c.ReferenceDbDatasourceConfig : HikariDataSource HikariDataSource (null)
+2021-10-02 12:23:02.937  INFO [dxc-example-service,,] 1788 --- [main] .g.d.i.d.r.c.ReferenceDbDatasourceConfig : JPA DatabasePlatform: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:02.938  INFO [dxc-example-service,,] 1788 --- [main] .g.d.i.d.r.c.ReferenceDbDatasourceConfig : JPA Properties: {hibernate.format_sql=true, hibernate.use_sql_comments=true, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, hibernate.batch_versioned_data=true, javax.persistence.schema-generation.database.action=drop-and-create, javax.persistence.schema-generation.scripts.drop-target=sqls/drop-schema.sql, hibernate.order_inserts=true, javax.persistence.schema-generation.scripts.create-target=sqls/create-schema.sql, javax.persistence.schema-generation.scripts.action=drop-and-create, hibernate.show_sql=false, hibernate.generate_statistics=false, hibernate.order_updates=true, hibernate.jdbc.batch_size=5}
+2021-10-02 12:23:02.941  INFO [dxc-example-service,,] 1788 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: referenceDbPersistenceUnit]
+2021-10-02 12:23:02.994  WARN [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-4 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2021-10-02 12:23:02.994  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-10-02 12:23:02.997  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-10-02 12:23:02.997  INFO [dxc-example-service,,] 1788 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-10-02 12:23:03.036  INFO [dxc-example-service,,] 1788 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-02 12:23:03.037  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'referenceDbPersistenceUnit'
+2021-10-02 12:23:03.289  INFO [dxc-example-service,,] 1788 --- [main] t.g.d.s.u.o.m.DefaultOrikaConfigurer     : DefaultOrikaMapper.configureMapping
+2021-10-02 12:23:03.354  WARN [dxc-example-service,,] 1788 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmV1Api' defined in file [C:\Users\patta\git\dxc-example-service\target\classes\th\go\dxc\api\qm_v1\controller\TsiPersonContactQmV1Api.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmService' defined in class path resource [th/go/dxc/ApplicaitonConfig.class]: Unsatisfied dependency expressed through method 'tsiPersonContactQmService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmServiceJpaImplMapper' defined in file [C:\Users\patta\git\dxc-example-service\target\classes\th\go\dxc\app\qm\util\TsiPersonContactQmServiceJpaImplMapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orikaMapperFacade' defined in class path resource [th/go/dxc/share/config/OrikaMapperConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ma.glasnost.orika.MapperFacade]: Factory method 'orikaMapperFacade' threw exception; nested exception is java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+2021-10-02 12:23:03.354  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'referenceDbPersistenceUnit'
+2021-10-02 12:23:03.356  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2021-10-02 12:23:03.357  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'dxcSamPersistenceUnit'
+2021-10-02 12:23:03.357  INFO [dxc-example-service,,] 1788 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'dataDbPersistenceUnit'
+2021-10-02 12:23:03.358  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-10-02 12:23:03.361  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2021-10-02 12:23:03.361  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-10-02 12:23:03.369  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-10-02 12:23:03.369  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-10-02 12:23:03.370  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-10-02 12:23:03.370  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-02 12:23:03.371  INFO [dxc-example-service,,] 1788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-02 12:23:03.375  INFO [dxc-example-service,,] 1788 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-10-02 12:23:03.378  WARN [dxc-example-service,,] 1788 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.2/java.net.Inet6AddressImpl.getHostByAddr(Native Method)
+ java.base@16.0.2/java.net.InetAddress$PlatformNameService.getHostByAddr(InetAddress.java:938)
+ java.base@16.0.2/java.net.InetAddress.getHostFromNameService(InetAddress.java:662)
+ java.base@16.0.2/java.net.InetAddress.getHostName(InetAddress.java:605)
+ java.base@16.0.2/java.net.InetAddress.getHostName(InetAddress.java:577)
+ app//org.springframework.cloud.commons.util.InetUtils$$Lambda$129/0x00000001001a11d8.call(Unknown Source)
+ java.base@16.0.2/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@16.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base@16.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+ java.base@16.0.2/java.lang.Thread.run(Thread.java:831)
+2021-10-02 12:23:03.402  INFO [dxc-example-service,,] 1788 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-10-02 12:23:03.424 ERROR [dxc-example-service,,] 1788 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmV1Api' defined in file [C:\Users\patta\git\dxc-example-service\target\classes\th\go\dxc\api\qm_v1\controller\TsiPersonContactQmV1Api.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmService' defined in class path resource [th/go/dxc/ApplicaitonConfig.class]: Unsatisfied dependency expressed through method 'tsiPersonContactQmService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmServiceJpaImplMapper' defined in file [C:\Users\patta\git\dxc-example-service\target\classes\th\go\dxc\app\qm\util\TsiPersonContactQmServiceJpaImplMapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orikaMapperFacade' defined in class path resource [th/go/dxc/share/config/OrikaMapperConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ma.glasnost.orika.MapperFacade]: Factory method 'orikaMapperFacade' threw exception; nested exception is java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at th.go.dxc.DxcExampleServiceApplication.main(DxcExampleServiceApplication.java:27)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmService' defined in class path resource [th/go/dxc/ApplicaitonConfig.class]: Unsatisfied dependency expressed through method 'tsiPersonContactQmService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmServiceJpaImplMapper' defined in file [C:\Users\patta\git\dxc-example-service\target\classes\th\go\dxc\app\qm\util\TsiPersonContactQmServiceJpaImplMapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orikaMapperFacade' defined in class path resource [th/go/dxc/share/config/OrikaMapperConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ma.glasnost.orika.MapperFacade]: Factory method 'orikaMapperFacade' threw exception; nested exception is java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tsiPersonContactQmServiceJpaImplMapper' defined in file [C:\Users\patta\git\dxc-example-service\target\classes\th\go\dxc\app\qm\util\TsiPersonContactQmServiceJpaImplMapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orikaMapperFacade' defined in class path resource [th/go/dxc/share/config/OrikaMapperConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ma.glasnost.orika.MapperFacade]: Factory method 'orikaMapperFacade' threw exception; nested exception is java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orikaMapperFacade' defined in class path resource [th/go/dxc/share/config/OrikaMapperConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ma.glasnost.orika.MapperFacade]: Factory method 'orikaMapperFacade' threw exception; nested exception is java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [ma.glasnost.orika.MapperFacade]: Factory method 'orikaMapperFacade' threw exception; nested exception is java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException accessible: module java.base does not "opens java.lang" to unnamed module @3315d2d7
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+	at ma.glasnost.orika.converter.builtin.CloneableConverter.<init>(CloneableConverter.java:64)
+	at ma.glasnost.orika.converter.builtin.CloneableConverter$Builtin.<init>(CloneableConverter.java:221)
+	at ma.glasnost.orika.converter.builtin.BuiltinConverters.register(BuiltinConverters.java:135)
+	at ma.glasnost.orika.impl.DefaultMapperFactory.build(DefaultMapperFactory.java:1278)
+	at ma.glasnost.orika.impl.DefaultMapperFactory.getMapperFacade(DefaultMapperFactory.java:881)
+	at th.go.dxc.share.config.OrikaMapperConfig.orikaMapperFacade(OrikaMapperConfig.java:71)
+	at th.go.dxc.share.config.OrikaMapperConfig$$EnhancerBySpringCGLIB$$b8c32fb9.CGLIB$orikaMapperFacade$2(<generated>)
+	at th.go.dxc.share.config.OrikaMapperConfig$$EnhancerBySpringCGLIB$$b8c32fb9$$FastClassBySpringCGLIB$$956913bd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at th.go.dxc.share.config.OrikaMapperConfig$$EnhancerBySpringCGLIB$$b8c32fb9.orikaMapperFacade(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+

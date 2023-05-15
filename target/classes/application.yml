@@ -1,0 +1,175 @@
+spring.main.allow-bean-definition-overriding: true
+spring:
+  application:
+    name: "dxc-example-service"
+    description: "บริการตัวอย่าง"
+  profiles.active: dev
+  output: 
+    ansi: 
+      enabled: DETECT    
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      client:
+        enabled: false
+  liquibase:
+    enabled: false
+
+info:
+  # static properties
+  app:
+    name: "dxc-example-service"
+    description: "บริการตัวอย่าง"
+    profiles: ${spring.profiles.active}
+# build properties from maven
+  build:
+    groupId: "th.go.dxc"
+    artifact: "dxc-example-service"
+    name: "dxc-example-service"
+    version: "1.0.0-RELEASE"
+  contact:  
+    name:  Office of Justice Affair, Thailand
+    url: http://www.oja.go.th
+    email: webmaster@oja.go.th
+  license:  
+    name: DXC License
+    url: http://www.dxc.go.th
+  term-of-service:
+    url:
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+#    import: "optional:configserver:"
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      client:
+        enabled: false
+  liquibase:
+    enabled: false
+eureka:
+  client:
+    enabled: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "test"
+#    import: "optional:configserver:"
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      client:
+        enabled: false
+  liquibase:
+    enabled: false
+eureka:
+  client:
+    enabled: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "sit"
+  cloud:
+    discovery:
+      client:
+        enabled: true
+    config:
+      enabled: false
+      fail-fast: false
+      discovery:
+        enabled: false
+        serviceId:  dxc-config-server
+  liquibase:
+    enabled: false
+
+eureka:
+#  environment: staging
+  instance:
+    hostname: 10.14.33.92 # Use when test via VPN (different IP)
+#    preferIpAddress: true # Use when ip is valid
+    leaseRenewalIntervalInSeconds: 10   # SBA
+#    health-check-url-path: /actuator/health    # SBA
+    nonSecurePortEnabled: true
+    securePortEnabled: false
+    metadataMap:    
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart (SBA)
+      user:  configUser
+      password:  c0nf1gP9ssw0rd
+  client:  
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5    # SBA
+    serviceUrl:  
+      defaultZone: http://10.14.33.37:8761/eureka
+
+---
+spring.config.activate.on-profile: "stg"
+spring.config.import: "configserver:http://configUser:c0nf1gP9ssw0rd@cloud-config-01.ad.thaidxc.org:8888/"
+spring:
+  cloud:
+    discovery:
+      client:
+        enabled: true
+    config:
+      enabled: true
+      fail-fast: true
+  liquibase:
+    enabled: false
+eureka:
+  environment: staging
+  instance:
+    preferIpAddress: true # Use when ip is valid
+    leaseRenewalIntervalInSeconds: 10   # SBA
+#    health-check-url-path: /actuator/health    # SBA
+    nonSecurePortEnabled: true
+    securePortEnabled: false
+    metadataMap:    
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart (SBA)
+  client:  
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5    # SBA
+    serviceUrl:  
+      defaultZone: http://10.14.33.37:8761/eureka
+---
+spring.config.activate.on-profile: "prd"
+spring.config.import: "configserver:http://configUser:c0nf1gP9ssw0rd@cloud-config-01.ad.thaidxc.org:8888/"
+spring:
+  cloud:
+    discovery:
+      client:
+        enabled: true
+    config:
+      enabled: true
+      fail-fast: true
+  liquibase:
+    enabled: false
+eureka:
+  environment: prod
+  instance:
+    preferIpAddress: true # Use when ip is valid
+    leaseRenewalIntervalInSeconds: 10   # SBA
+#    health-check-url-path: /actuator/health    # SBA
+    nonSecurePortEnabled: true
+    securePortEnabled: false
+    metadataMap:    
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart (SBA)
+  client:  
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5    # SBA
+    serviceUrl:  
+      defaultZone: http://cloud-registry-01.ad.thaidxc.org:8761/eureka,http://cloud-registry-02.ad.thaidxc.org:8761/eureka

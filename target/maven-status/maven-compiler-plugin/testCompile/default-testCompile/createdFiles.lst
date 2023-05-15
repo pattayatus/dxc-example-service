@@ -1,0 +1,4 @@
+th\go\dxc\share\util\MapperUtilTest.class
+th\go\dxc\infra\datasource\primary\repository\TsiPersonContactRepositoryTest.class
+th\go\dxc\app\qm\service\TsiPersonContactQmServiceJpaImplTest.class
+th\go\dxc\DxcExampleServiceApplicationTest.class

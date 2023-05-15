@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: th.go.dxc.infra.datasource.primary.repository.TsiPersonContactRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.269 s <<< FAILURE! - in th.go.dxc.infra.datasource.primary.repository.TsiPersonContactRepositoryTest
+testFindById  Time elapsed: 0 s  <<< ERROR!
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'th.go.dxc.infra.datasource.primary.repository.TsiPersonContactRepositoryTest': Unsatisfied dependency expressed through field 'repository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'th.go.dxc.infra.datasource.data_db.repository.TsiPersonContactRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'th.go.dxc.infra.datasource.data_db.repository.TsiPersonContactRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+

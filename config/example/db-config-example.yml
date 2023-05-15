@@ -1,0 +1,37 @@
+infra.datasource.primary:
+    datasource:
+      url: jdbc:h2:mem:primary;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      driverClassName: org.h2.Driver
+      username: sa
+      password:
+      hikari:    
+        connection-timeout: 20000 #maximum number of milliseconds that a client will wait for a connection
+        minimum-idle: 10 #minimum number of idle connections maintained by HikariCP in a connection pool
+        maximum-pool-size: 10 #maximum pool size
+        idle-timeout: 10000 #maximum idle time for connection
+        max-lifetime: 30000 # maximum lifetime in milliseconds of a connection in the pool after it is closed.
+        auto-commit: true #default auto-commit behavior.
+    # JPA Setting
+    jpa:
+      open-in-view: true  # have the same EntityManager until the web request is finished
+      show-sql: false # for debug
+      database-platform: org.hibernate.dialect.H2Dialect
+      properties:
+  # DDL Auto Properties (database)
+        javax.persistence.schema-generation.database.action: drop-and-create
+        javax.persistence.schema-generation.scripts.action: drop-and-create
+  # DDL Auto Properties (SQL File)      
+        javax.persistence.schema-generation.scripts.create-target: sqls/create-schema.sql
+        javax.persistence.schema-generation.scripts.drop-target: sqls/drop-schema.sql      
+  # Naming Convention Properties      
+        hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+  # Batch Properties  
+        hibernate.jdbc.batch_size: 5
+        hibernate.batch_versioned_data: true
+        hibernate.order_inserts: true
+        hibernate.order_updates: true
+  # Hibernate Configuration Properties (For Debug)
+        hibernate.show_sql: false
+        hibernate.format_sql: true
+        hibernate.use_sql_comments: true
+        hibernate.generate_statistics: false

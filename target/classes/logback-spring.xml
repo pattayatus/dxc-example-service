@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty name="SERVICE_NAME" source="spring.application.name" defaultValue="spring" />      
+    <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/spring.log}"/>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml" />
+    <property name="ROLLING_FILE_NAME_PATTERN" value="${LOGBACK_ROLLINGPOLICY_FILE_NAME_PATTERN:-${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz}.json"></property>
+    <property name="LOG_FILE_CLEAN_HISTORY_ON_START" value="${LOGBACK_ROLLINGPOLICY_CLEAN_HISTORY_ON_START:-false}"></property>
+    <property name="LOG_FILE_MAX_SIZE" value="${LOGBACK_ROLLINGPOLICY_MAX_FILE_SIZE:-10MB}"/>
+    <property name="LOG_FILE_MAX_HISTORY" value="{LOGBACK_ROLLINGPOLICY_MAX_HISTORY:-7}"/>
+    <property name="LOG_FILE_TOTAL_SIZE_CAP" value="${LOGBACK_ROLLINGPOLICY_TOTAL_SIZE_CAP:-0}"/>
+    <!-- https://github.com/elastic/ecs-logging-java/blob/master/logback-ecs-encoder/src/main/resources/co/elastic/logging/logback/boot/ecs-file-appender.xml -->
+    <include resource="co/elastic/logging/logback/boot/ecs-file-appender.xml" />
+    <appender name="ECS_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+      <!-- https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html -->
+      <encoder class="co.elastic.logging.logback.EcsEncoder">
+        <serviceName>${SERVICE_NAME:-spring-boot-application}</serviceName>
+        <includeMarkers>true</includeMarkers>
+        <stackTraceAsArray>true</stackTraceAsArray>
+        <includeOrigin>true</includeOrigin>
+<!--         <includeCallerData>true</includeCallerData>  -->
+      </encoder>
+    </appender>
+    <root level="INFO">
+<!--         <appender-ref ref="CONSOLE"/> -->
+        <appender-ref ref="CONSOLE"/> 
+        <appender-ref ref="ECS_JSON_FILE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
